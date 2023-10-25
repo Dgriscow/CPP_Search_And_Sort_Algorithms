@@ -14,8 +14,8 @@ int Search::linear_Search_Int(int key, int *toSearch, int arraySize)
 {
 	//Length Given
 	for (int i = 0; i < arraySize; i++) {
-
-		if (toSearch[i] == key) {
+		
+		if ( *(toSearch + i) == key) {
 			return i;
 		}
 
@@ -41,11 +41,11 @@ int Search::binary_Search_Int(int key, int* toSearch, int min, int max)
 
 		//if midpoint is smaller than the key, remove the smaller half 
 		
-		if (toSearch[midPoint] < key) {
+		if ( *(toSearch + midPoint) < key) {
 			//recall the search with a new min, but the same max
 			binary_Search_Int(key, toSearch, midPoint + 1, max);
 		}
-		else if (toSearch[midPoint] > key){
+		else if ( *(toSearch + midPoint) > key){
 			//if the midpoint is larger than the key, recursively recall,
 			//This time the minimum is the name but the max is the midpoint + 1
 			binary_Search_Int(key, toSearch, min, midPoint - 1);
