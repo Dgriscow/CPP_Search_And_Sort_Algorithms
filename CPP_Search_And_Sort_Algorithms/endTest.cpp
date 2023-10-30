@@ -43,14 +43,49 @@ int main() {
 	//int n = s.binary_Search_Int(g, demoArray, 0, 9);
 	
 	//Sort the Demo Array
-	sort.selection_sort_Int(demoArray, ASIZE);
+	int choice = 0;
+	do {
+		cout << "what alg Do you want to do? \n1:selection sort\n2:Bubble Sort\n 3:binary search\n 4 linear search\n 9 quit\n:";
+		
+		cin >> choice;
+
+		if (choice == 1) {
+			sort.selection_sort_Int(demoArray, ASIZE);
+		}
+		else if (choice == 2) {
+			sort.bubble_sort_Int(demoArray, ASIZE);
+		}
+		else if (choice == 3) {
+			int u_search = 0;
+			cout << "what do you want to search by?";
+			cin >> u_search;
+			int x = s.binary_Search_Int(u_search, demoArray, 0, ASIZE);
+			cout << "Found The Key: " << x << endl;
+		}
+		else if (choice == 4) {
+			int u_search2 = 0;
+
+			cout << "what do you want to search to?";
+
+			cin >> u_search2;
+
+			int y = s.linear_Search_Int(u_search2, demoArray, ASIZE);
+			cout << "Found The Key: " << y << endl;
+		}
+		
+
+
+		displayArray(demoArray, ASIZE);
+
+
+	} while (choice != 9);
+	
+
 
 
 	//before running, print out the whole loop
 
 
-	cout << "Sorted\n";
-	displayArray(demoArray, ASIZE);
 
 
 	/*

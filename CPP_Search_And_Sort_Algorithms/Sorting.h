@@ -10,5 +10,7 @@ private:
 public:
 	void selection_sort_Int(int* unsorted, int size);
 
+	void bubble_sort_Int(int* unsorted, int size);
+
 
 };

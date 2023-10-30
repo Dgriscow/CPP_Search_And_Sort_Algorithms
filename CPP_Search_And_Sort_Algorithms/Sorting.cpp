@@ -50,3 +50,44 @@ void Sorting::selection_sort_Int(int* unsorted, int size)
 
 	}
 }
+
+void Sorting::bubble_sort_Int(int* unsorted, int size)
+{
+	bool flag = false;
+	//outer search to search through the items
+	//Harvard code says to start at k = 1 to n = -1, however its really just starting at 0. 
+	for (int item = 0; item < size - 1; item++) {
+		flag = false;
+		for (int index = 0; index < size - item - 1; index++) {
+
+
+			//check if swap condition is meet 
+			if (*(unsorted +index) > *(unsorted + index + 1)) {
+				swap_Ints(*(unsorted+ index), *(unsorted + index + 1));
+				flag = true;
+			}
+		
+			
+
+
+		}
+		//sorting no longer needs to happen, so when its not true break out. 
+		if (!flag) {
+			break;
+		}
+
+
+	
+
+		
+
+
+
+		
+
+
+	}
+
+
+
+}
